@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.cadastro__title {
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* =========VIEW========== */
+
+.view__table {
+    border: 1px solid #4443;
+    margin: 0 auto;
+}
+
+.view__head .view__td {
+    font-weight: bold;
+    text-align: center;
+}
+
+.view__td {
+    border: 1px solid #333;
+    padding: 5px 15px;
+}
+
+.view__btn {
+    background-color: transparent;
+    font-weight: bold;
+    color: green;
+    border: 2px solid green;
+    padding: 5px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.view__btn:hover {
+    background-color: green;
+    color: #FFF;
+}
