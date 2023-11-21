@@ -5,12 +5,13 @@
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- font -->
-cadastro-chamado    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <title>Cadastro de chamados</title>
 </head>
 <body>
+    <h1 class="cadastro__title">Cadastro de chamados</h1>
     <form class="form__register" method="post" action="cadastra_chamado.php">
         <div class="form__input-box">
             <label class="form__label" for="ra">RA:</label>
@@ -42,8 +43,9 @@ cadastro-chamado    <link rel="preconnect" href="https://fonts.googleapis.com">
             <label class="form__label" for="sala">Sala:</label>
             <input class="form__input" name="sala" type="text" placeholder="Digite a sala">
         </div>
-        <input type="submit" value="Cadastrar">
-        <input type="reset" value="Limpar">
+        <input class="submit__btn" type="submit" value="Cadastrar">
+        <input class="reset__btn" type="reset" value="Limpar">
     </form>
+    <a class='back__btn' href='index.html'>Voltar</a>
 </body>
 </html>

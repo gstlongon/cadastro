@@ -45,6 +45,6 @@
         ?>
     </table>
     <br />
-    <a href="index.html"><input type="button" value="Voltar"></a>
+    <a class="back__btn" href="index.html">Voltar</a>
 </body>
 </html>
