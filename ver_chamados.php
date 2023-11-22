@@ -26,16 +26,16 @@
         <?php
             require("conecta.php");
 
-            $dados_select = mysqli_query($conn, "SELECT ra, nome, problema.nome_problema, descricao, sala, DATE_FORMAT(horario, '%d/%m/%Y %H:%i:%s') AS horario_formatado, horario_resolucao FROM cadastro INNER JOIN problema ON cadastro.problema = problema.id_problema");
+            $dados_select = mysqli_query($conn, "SELECT id_chamado, ra, nome, problema.nome_problema, descricao, sala, DATE_FORMAT(horario, '%d/%m/%Y %H:%i:%s') AS horario_formatado, horario_resolucao FROM cadastro INNER JOIN problema ON cadastro.problema = problema.id_problema");
             echo "<form action='resolvido.php' method='post'>";
             while($dado = mysqli_fetch_array($dados_select)) {
-                if ($dado[6] === NULL) {
+                if ($dado[7] === NULL) {
                     echo '<tr>';
-                    echo '<td class="view__td">'.$dado[0].'</td>';
                     echo '<td class="view__td">'.$dado[1].'</td>';
                     echo '<td class="view__td">'.$dado[2].'</td>';
                     echo '<td class="view__td">'.$dado[3].'</td>';
                     echo '<td class="view__td">'.$dado[4].'</td>';
+                    echo '<td class="view__td">'.$dado[5].'</td>';
                     echo '<td class="view__td">'.$dado['horario_formatado'].'</td>';
                     echo '<td class="view__td"><input class="view__btn" type="submit" name="enviar['.$dado[0].']" value="Resolver"></td>';
                     echo '</tr>';

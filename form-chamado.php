@@ -15,11 +15,11 @@
     <form class="form__register" method="post" action="cadastra_chamado.php">
         <div class="form__input-box">
             <label class="form__label" for="ra">RA:</label>
-            <input class="form__input" name="ra" type="text" placeholder="Digite o RA">
+            <input class="form__input" name="ra" type="text" placeholder="Digite o RA" required>
         </div>
         <div class="form__input-box">
             <label class="form__label" for="nome">Nome:</label>
-            <input class="form__input" name="nome" type="text" placeholder="Digite seu nome">
+            <input class="form__input" name="nome" type="text" placeholder="Digite seu nome" required>
         </div>
         <div class="form__input-box">
             <?php
@@ -27,7 +27,7 @@
                 $dados_select = mysqli_query($conn, "SELECT id_problema, nome_problema FROM problema");
             ?>
             <label class="form__label" for="nome_problema">Problema:</label>
-            <select class="form__select" name='nome_problema'>
+            <select class="form__select" name='nome_problema' required>
             <?php
                 while($dado = mysqli_fetch_array($dados_select)) {
                     echo '<option class="form__option" value='.$dado[0].'>'.$dado[1].'</option>';
@@ -41,7 +41,7 @@
         </div>
         <div class="form__input-box">
             <label class="form__label" for="sala">Sala:</label>
-            <input class="form__input" name="sala" type="text" placeholder="Digite a sala">
+            <input class="form__input" name="sala" type="text" placeholder="Digite a sala" required>
         </div>
         <input class="submit__btn" type="submit" value="Cadastrar">
         <input class="reset__btn" type="reset" value="Limpar">

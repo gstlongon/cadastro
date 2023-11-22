@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    padding-bottom: 60px;
 }
 
 .cadastro__title {
@@ -36,6 +37,17 @@ body {
     background-color: #2b4e84;
     color: #FFF;
 }
+
+.not__found {
+    width: 100%;
+    height: auto;
+    display: block;
+    text-align: center;
+    margin-top: 60px;
+    font-weight: bold;
+}
+
+
 
 /* =========NAV========== */
 
@@ -177,7 +189,7 @@ textarea.form__input {
 }
 
 .view__td svg {
-    margin: auto;
+    margin: 0px 5px 0px 0px;
 }
 
 .view__btn {

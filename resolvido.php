@@ -4,7 +4,7 @@
     foreach ($_POST['enviar'] as $id => $value) {
         $horario_resolucao = date('Y-m-d H:i:s');
     
-        $sql = "UPDATE cadastro SET horario_resolucao = ? WHERE ra = ?";
+        $sql = "UPDATE cadastro SET horario_resolucao = ? WHERE id_chamado = ?";
     
         $stmt = $conn->prepare($sql);
 
